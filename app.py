@@ -164,3 +164,8 @@ async def add_menu(item_name:str,current_user: User = Depends(get_current_active
 		json.dump(data, outfile)
 	outfile.close()
 	return {"message":"data added"}
+
+#root function
+@app.get('/')
+def welcome():
+    return {"message":"Welcome to 18219006's II3160 Integrated System Technology mid exam! Please use '/docs' to try the API"}
